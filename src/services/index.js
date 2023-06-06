@@ -110,12 +110,12 @@ export const getWeather = async (province, city) => {
     return RUN_TIME_STORAGE[`${province}_${city}`]
   }
 
-  const cityInfo = getWeatherCityInfo(province, city)
-  if (!cityInfo) {
-    console.error('配置文件中找不到相应的省份或城市')
-    return {}
-  }
-  const url = `http://t.weather.itboy.net/api/weather/city/${cityInfo.city_code}`
+//   const cityInfo = getWeatherCityInfo(province, city)
+//   if (!cityInfo) {
+//     console.error('配置文件中找不到相应的省份或城市')
+//     return {}
+//   }
+  const url = `http://t.weather.itboy.net/api/weather/city/101100101`
 
   const res = await axios.get(url, {
     headers: {
